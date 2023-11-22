@@ -4,7 +4,7 @@ import {
   DataProvider,
   RecyclerListView
 } from "recyclerlistview";
-import { Strip } from "./Strip";
+import { Rail } from "./Rail";
 
 const layout =  require('./layouts.json'); 
 const { contentStrip4x3 } = layout
@@ -24,9 +24,9 @@ function App() {
       dim.height = contentStrip4x3.strip.height;
     }
   );
-
+  const noConent = !(data && data.length);
   const renderStrip = () => {
-    return <Strip/>;
+    return <Rail/>;
   };
 
   return (
@@ -36,12 +36,12 @@ function App() {
         backgroundColor:"black",
         // borderColor: "blue",
         // borderWidth: 1,
-        paddingVertical: contentStrip4x3.strip.paddingVertical
+        paddingVertical: contentStrip4x3.strip.paddingVertical,
+        display: !noConent ? "flex" : "none"
       }}
       dataProvider={dp}
       layoutProvider={lp}
       rowRenderer={renderStrip}
-      showsScrollIndicator={false}
     />
   );
 }
