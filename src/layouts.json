@@ -3,7 +3,8 @@
         "strip": {
             "height": 462,
             "paddingVertical" : 20,
-            "width": 440
+            "width": 440,
+            "stripHeight": 423
         },
 		"header": {
 			"fontSize": 21,

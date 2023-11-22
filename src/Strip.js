@@ -46,7 +46,7 @@ export const Strip = () => {
       },
       (_type, dim) => {
         dim.width = strip.width;
-        dim.height = strip.height;
+        dim.height = strip.stripHeight;
       }
     );
     const renderRow = () => {
@@ -54,10 +54,10 @@ export const Strip = () => {
         <View
           style={{
             width: strip.width,
-            height: strip.height,
-            // borderColor: "red",
-            // borderWidth: 1,
-            paddingHorizontal: 20,
+            height: strip.stripHeight,
+            borderColor: "red",
+            borderWidth: 1,
+            padding: 20,
           }}
         >
           <View
@@ -65,8 +65,8 @@ export const Strip = () => {
             style={{
               width: poster.width,
               height: poster.height,
-            //   borderColor: "blue",
-            //   borderWidth: 2,
+              borderColor: "blue",
+              borderWidth: 2,
               marginBottom: poster.marginBottom
             }}
           >
@@ -86,7 +86,7 @@ export const Strip = () => {
     return (
       <View
         style={{
-          height: strip.height,
+          height: strip.stripHeight,
           width: "100%",
         //   borderColor: "green",
         //   borderWidth: 3
